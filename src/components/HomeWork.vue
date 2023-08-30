@@ -12,9 +12,10 @@ console.log(tableData.value);
 async function list(){
   let url = 'https://basic-blog.teamrabbil.com/api/post-categories';
   let response = await axios.get(url)
-  console.log(response)
+  console.log(response.data[0])
   tableData.value = response.data['data'];  
 } 
+list()
 </script>
 
 <template>
